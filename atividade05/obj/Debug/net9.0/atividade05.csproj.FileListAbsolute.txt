@@ -1,0 +1,14 @@
+D:\cod\c#\atividade05\obj\Debug\net9.0\atividade05.GeneratedMSBuildEditorConfig.editorconfig
+D:\cod\c#\atividade05\obj\Debug\net9.0\atividade05.AssemblyInfoInputs.cache
+D:\cod\c#\atividade05\obj\Debug\net9.0\atividade05.AssemblyInfo.cs
+D:\cod\c#\atividade05\obj\Debug\net9.0\atividade05.csproj.CoreCompileInputs.cache
+D:\cod\c#\atividade05\bin\Debug\net9.0\atividade05.exe
+D:\cod\c#\atividade05\bin\Debug\net9.0\atividade05.deps.json
+D:\cod\c#\atividade05\bin\Debug\net9.0\atividade05.runtimeconfig.json
+D:\cod\c#\atividade05\bin\Debug\net9.0\atividade05.dll
+D:\cod\c#\atividade05\bin\Debug\net9.0\atividade05.pdb
+D:\cod\c#\atividade05\obj\Debug\net9.0\atividade05.dll
+D:\cod\c#\atividade05\obj\Debug\net9.0\refint\atividade05.dll
+D:\cod\c#\atividade05\obj\Debug\net9.0\atividade05.pdb
+D:\cod\c#\atividade05\obj\Debug\net9.0\atividade05.genruntimeconfig.cache
+D:\cod\c#\atividade05\obj\Debug\net9.0\ref\atividade05.dll
