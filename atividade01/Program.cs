@@ -11,7 +11,7 @@ class Program
         for (int i = 0; i < 5; i++)
         {
             Console.Write("Digite a sua idade: ");
-            idade = Convert.ToInt32(Console.ReadLine());
+            idade = int.Parse(Console.ReadLine());
             Console.Write("Digite o seu sexo: ");
             sexo = Convert.ToChar(Console.ReadLine());
             Console.Clear();

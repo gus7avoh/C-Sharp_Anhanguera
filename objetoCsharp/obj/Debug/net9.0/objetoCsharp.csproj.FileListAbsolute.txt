@@ -1,0 +1,15 @@
+D:\cod\c#\objetoCsharp\bin\Debug\net9.0\objetoCsharp.exe
+D:\cod\c#\objetoCsharp\bin\Debug\net9.0\objetoCsharp.deps.json
+D:\cod\c#\objetoCsharp\bin\Debug\net9.0\objetoCsharp.runtimeconfig.json
+D:\cod\c#\objetoCsharp\bin\Debug\net9.0\objetoCsharp.dll
+D:\cod\c#\objetoCsharp\bin\Debug\net9.0\objetoCsharp.pdb
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.AssemblyInfoInputs.cache
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.AssemblyInfo.cs
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.csproj.CoreCompileInputs.cache
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.sourcelink.json
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.dll
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\refint\objetoCsharp.dll
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.pdb
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\objetoCsharp.genruntimeconfig.cache
+D:\cod\c#\objetoCsharp\obj\Debug\net9.0\ref\objetoCsharp.dll
