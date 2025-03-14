@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Mail;
 
@@ -19,8 +20,6 @@ public class Contatos
 
 class Program
 {
-
-
     static bool EmailValido(string email){
             try{
                 var endereco = new MailAddress(email);
@@ -30,6 +29,57 @@ class Program
                 return false;
             }
     }
+
+    static string IsTelefoneValido(string telefone){
+        string number = telefone;
+        
+        while (true)
+                {
+                    number.Replace(".", "");
+                    number.Replace("(", "");
+                    number.Replace(")", "");
+                    number.Replace("-", "");
+
+                    if (string.IsNullOrWhiteSpace(number) || !number.All(char.IsDigit))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Número inválido, digite novamente!\n");
+                        Console.Write("Digite o telefone da pessoa: ");
+                        number = Console.ReadLine().Trim();
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+        return number;
+    }
+
+    static int ValidarNumero(int numeroEntrada, int opcao1, int? opcao2 = null, int? opcao3 = null, int? opcao4 = null){
+        int numero = numeroEntrada;
+
+        while (true)
+        {
+            bool valido = numero == opcao1 ||
+                        (opcao2.HasValue && numero == opcao2.Value) ||
+                        (opcao3.HasValue && numero == opcao3.Value) ||
+                        (opcao4.HasValue && numero == opcao4.Value);
+            if (valido)
+            {
+                break;
+            }
+
+            Console.Write("Opção inválida! Digite novamente --> ");
+
+            if (!int.TryParse(Console.ReadLine(), out numero))
+            {
+                Console.WriteLine("Por favor, digite um número válido!");
+            }
+        }
+
+        return numero;
+    }
+
 
     static void Main()
     {
@@ -61,25 +111,10 @@ class Program
                 string name = Console.ReadLine().Trim();
 
                 string number;
-                while (true)
-                {
-                    Console.Write("Digite o telefone da pessoa: ");
-                    number = Console.ReadLine().Trim();
-                    number.Replace(".", "");
-                    number.Replace("(", "");
-                    number.Replace(")", "");
-                    number.Replace("-", "");
+                Console.Write("Digite o telefone da pessoa: ");
+                number = Console.ReadLine().Trim();
 
-                    if (string.IsNullOrWhiteSpace(number) || !number.All(char.IsDigit))
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Número inválido, digite novamente!\n");
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
+                number = IsTelefoneValido(number);
 
                 string mail;
                 while(true){
@@ -153,10 +188,10 @@ class Program
                             break;
                         case 2:
                             Console.Write("Digite o numero do contato: ");
-                            string numeroRemover = Console.ReadLine();//////////// validar telefone trasformar a ultima validacao em uma funcao e usar aqui
+                            string numeroRemover = Console.ReadLine();
+                            numeroRemover = IsTelefoneValido(numeroRemover);
 
                             int NumRemovidos = ListaContatos.RemoveAll(contato => contato.Telefone == numeroRemover);
-
                             if (NumRemovidos > 0)
                             {
                                 Console.WriteLine($"Contato com numero {numeroRemover} removido com sucesso!");
@@ -191,6 +226,8 @@ class Program
                         case 2:
                             Console.Write("Digite o Numero: ");
                             string NumeroPesquisa = Console.ReadLine();
+                            NumeroPesquisa = IsTelefoneValido(NumeroPesquisa);
+
                             var resultadoNumero = ListaContatos.Where(contato => contato.Nome.ToLower().Contains(NumeroPesquisa.ToLower()));
                             int c = 0;
                             foreach (var contato in resultadoNumero)
