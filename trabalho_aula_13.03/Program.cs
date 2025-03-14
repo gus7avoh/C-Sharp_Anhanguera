@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 
 public class Contatos
 {
@@ -18,6 +19,18 @@ public class Contatos
 
 class Program
 {
+
+
+    static bool EmailValido(string email){
+            try{
+                var endereco = new MailAddress(email);
+                return true;
+            }
+            catch{
+                return false;
+            }
+    }
+
     static void Main()
     {
         List<Contatos> ListaContatos = new List<Contatos>();
@@ -42,20 +55,50 @@ class Program
 
             switch (resposta)
             {
-                case 1:
-                    Console.Clear();
-                    Console.Write("Digite o nome da pessoa: ");
-                    string name = Console.ReadLine();
+             case 1:
+                Console.Clear();
+                Console.Write("Digite o nome da pessoa: ");
+                string name = Console.ReadLine().Trim();
 
+                string number;
+                while (true)
+                {
                     Console.Write("Digite o telefone da pessoa: ");
-                    string number = Console.ReadLine();
+                    number = Console.ReadLine().Trim();
+                    number.Replace(".", "");
+                    number.Replace("(", "");
+                    number.Replace(")", "");
+                    number.Replace("-", "");
 
+                    if (string.IsNullOrWhiteSpace(number) || !number.All(char.IsDigit))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Número inválido, digite novamente!\n");
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                string mail;
+                while(true){
                     Console.Write("Digite o email da pessoa: ");
-                    string mail = Console.ReadLine();
+                    mail = Console.ReadLine().Trim();
 
-                    ListaContatos.Add(new Contatos(name, number, mail));
-                    Console.WriteLine("\nContato adicionado com sucesso!");
-                    break;
+                    if (EmailValido(mail)){
+                        break;
+                    }
+                    else{
+                        Console.Clear();
+                        Console.WriteLine("Email inválido!");
+                    }
+                }
+
+                ListaContatos.Add(new Contatos(name, number, mail));
+
+                Console.WriteLine("\nContato adicionado com sucesso!");
+                break;
 
                 case 2:
                     Console.Clear();
@@ -79,31 +122,38 @@ class Program
                 case 3:
                     Console.Clear();
 
-                    Console.Write("1 - Remover o nome \n");
-                    Console.Write("2 - Remover o telefone\n");
-                    Console.Write("-->");
-                    int pergunta = Convert.ToInt32(Console.ReadLine());
+                    int pergunta;
+                    while(true){
+                        Console.Write("1 - Remover o nome \n");
+                        Console.Write("2 - Remover o telefone\n");
+                        Console.Write("-->");
+                        pergunta = Convert.ToInt32(Console.ReadLine().Trim());
 
+                        if (pergunta != 1 || pergunta != 2){
+                            Console.Clear();
+                            Console.Write("Opção invalida!!\n");
+                        }else{
+                            break;
+                        }
+                    }
+                    
                     switch (pergunta){
                         case 1:
                             Console.Write("Digite o nome do contato que deseja remover: ");
-                            string nomeRemover = Console.ReadLine().ToLower();
+                            string nomeRemover = Console.ReadLine().ToLower().Trim();
 
                             int removidos = ListaContatos.RemoveAll(contato => contato.Nome.ToLower() == nomeRemover);
 
-                            if (removidos > 0)
-                            {
+                            if (removidos > 0){
                                 Console.WriteLine($"Contato {nomeRemover} removido com sucesso!");
-                            }
-                            else
-                            {
+                            }else{
                                 Console.WriteLine("Contato não encontrado.");
                             }
+
                             break;
-      
                         case 2:
                             Console.Write("Digite o numero do contato: ");
-                            string numeroRemover = Console.ReadLine();
+                            string numeroRemover = Console.ReadLine();//////////// validar telefone trasformar a ultima validacao em uma funcao e usar aqui
 
                             int NumRemovidos = ListaContatos.RemoveAll(contato => contato.Telefone == numeroRemover);
 
@@ -123,7 +173,7 @@ class Program
                     Console.Write("1 - Pesquisar por Nome: \n");
                     Console.Write("2 - Pesquisar Por telefone\n");
                     Console.Write("-->");
-                    int p = Convert.ToInt32(Console.ReadLine());
+                    int p = Convert.ToInt32(Console.ReadLine()); //////////// criar um metodo que recebe como parametro quais numeros vai ser validados usando a estrutura que eu ja criei
 
                     switch (p){
                         case 1:
