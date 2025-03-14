@@ -1,0 +1,15 @@
+D:\cod\c#\trabalho_aula_13.03\bin\Debug\net9.0\trabalho_aula_13.03.exe
+D:\cod\c#\trabalho_aula_13.03\bin\Debug\net9.0\trabalho_aula_13.03.deps.json
+D:\cod\c#\trabalho_aula_13.03\bin\Debug\net9.0\trabalho_aula_13.03.runtimeconfig.json
+D:\cod\c#\trabalho_aula_13.03\bin\Debug\net9.0\trabalho_aula_13.03.dll
+D:\cod\c#\trabalho_aula_13.03\bin\Debug\net9.0\trabalho_aula_13.03.pdb
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.GeneratedMSBuildEditorConfig.editorconfig
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.AssemblyInfoInputs.cache
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.AssemblyInfo.cs
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.csproj.CoreCompileInputs.cache
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.sourcelink.json
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.dll
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\refint\trabalho_aula_13.03.dll
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.pdb
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\trabalho_aula_13.03.genruntimeconfig.cache
+D:\cod\c#\trabalho_aula_13.03\obj\Debug\net9.0\ref\trabalho_aula_13.03.dll
