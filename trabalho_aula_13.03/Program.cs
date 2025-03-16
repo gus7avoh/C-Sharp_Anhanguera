@@ -35,12 +35,14 @@ class Program
         
         while (true)
                 {
-                    number.Replace(".", "");
-                    number.Replace("(", "");
-                    number.Replace(")", "");
-                    number.Replace("-", "");
+                    number = number.Replace(".", "");
+                    number = number.Replace("(", "");
+                    number = number.Replace(")", "");
+                    number = number.Replace("-", "");
+                    number = number.Replace(" ", "");
 
-                    if (string.IsNullOrWhiteSpace(number) || !number.All(char.IsDigit))
+
+                    if (!number.All(char.IsDigit))
                     {
                         Console.Clear();
                         Console.WriteLine("Número inválido, digite novamente!\n");
@@ -55,31 +57,28 @@ class Program
         return number;
     }
 
-    static int ValidarNumero(int numeroEntrada, int opcao1, int? opcao2 = null, int? opcao3 = null, int? opcao4 = null){
+    static int ValidarNumero(int numeroEntrada, int opcao1, int? opcao2 = null, int? opcao3 = null, int? opcao4 = null, int? opcao5 = null){
         int numero = numeroEntrada;
 
-        while (true)
-        {
-            bool valido = numero == opcao1 ||
+        while (true){
+            bool valido = (numero == opcao1) ||
                         (opcao2.HasValue && numero == opcao2.Value) ||
                         (opcao3.HasValue && numero == opcao3.Value) ||
-                        (opcao4.HasValue && numero == opcao4.Value);
-            if (valido)
-            {
+                        (opcao4.HasValue && numero == opcao4.Value) ||
+                        (opcao5.HasValue && numero == opcao5.Value);
+            if (valido){
                 break;
-            }
+            }else{
+                Console.Write("Opção inválida! Digite novamente --> ");
 
-            Console.Write("Opção inválida! Digite novamente --> ");
-
-            if (!int.TryParse(Console.ReadLine(), out numero))
-            {
-                Console.WriteLine("Por favor, digite um número válido!");
+                if (!int.TryParse(Console.ReadLine(), out numero))
+                {
+                    Console.WriteLine("Por favor, digite um número válido!");
+                }
             }
         }
-
         return numero;
     }
-
 
     static void Main()
     {
@@ -96,12 +95,8 @@ class Program
             Console.WriteLine("5 - Sair\n");
             Console.Write("--> ");
 
-            int resposta;
-            if (!int.TryParse(Console.ReadLine(), out resposta))
-            {
-                Console.WriteLine("Opção inválida! Digite um número.");
-                continue;
-            }
+            int resposta = Convert.ToInt32(Console.ReadLine());
+            resposta = ValidarNumero(resposta, 1, 2, 3, 4, 5);
 
             switch (resposta)
             {
@@ -139,12 +134,10 @@ class Program
                     Console.Clear();
                     Console.WriteLine("Os contatos adicionados são:\n");
 
-                    if (ListaContatos.Count == 0)
-                    {
+                    if (ListaContatos.Count == 0){
                         Console.WriteLine("Nenhum contato encontrado.");
                     }
-                    else
-                    {
+                    else{
                         int contador = 1;
                         foreach (Contatos contato in ListaContatos)
                         {
@@ -158,19 +151,13 @@ class Program
                     Console.Clear();
 
                     int pergunta;
-                    while(true){
-                        Console.Write("1 - Remover o nome \n");
-                        Console.Write("2 - Remover o telefone\n");
-                        Console.Write("-->");
-                        pergunta = Convert.ToInt32(Console.ReadLine().Trim());
+                    
+                    Console.Write("1 - Remover pelo nome \n");
+                    Console.Write("2 - Remover pelo telefone\n");
+                    Console.Write("-->");
+                    pergunta = Convert.ToInt32(Console.ReadLine().Trim());
 
-                        if (pergunta != 1 || pergunta != 2){
-                            Console.Clear();
-                            Console.Write("Opção invalida!!\n");
-                        }else{
-                            break;
-                        }
-                    }
+                    pergunta = ValidarNumero(pergunta, 1, 2);
                     
                     switch (pergunta){
                         case 1:
@@ -208,32 +195,41 @@ class Program
                     Console.Write("1 - Pesquisar por Nome: \n");
                     Console.Write("2 - Pesquisar Por telefone\n");
                     Console.Write("-->");
-                    int p = Convert.ToInt32(Console.ReadLine()); //////////// criar um metodo que recebe como parametro quais numeros vai ser validados usando a estrutura que eu ja criei
+                    int p = Convert.ToInt32(Console.ReadLine().Trim()); 
+                    p = ValidarNumero(p, 1 ,2);
 
                     switch (p){
                         case 1:
                             Console.Write("Digite o nome: ");
                             string nomePesquisa = Console.ReadLine();
                             var resultadoNome = ListaContatos.Where(contato => contato.Nome.ToLower().Contains(nomePesquisa.ToLower()));
-                            int cont = 0;
-                            foreach (var contato in resultadoNome)
-                            {
-                                Console.WriteLine($"{cont}° Nome: {contato.Nome}, Telefone: {contato.Telefone}, Email: {contato.Email}");
-                                cont++;
-                            }
+                            if (resultadoNome.Any())
+                                {int cont = 0;
+                                foreach (var contato in resultadoNome)
+                                {
+                                    Console.WriteLine($"{cont}° Nome: {contato.Nome}, Telefone: {contato.Telefone}, Email: {contato.Email}");
+                                    cont++;
+                                }
+                            }else{
+                                    Console.Write("Nenhum resultado encontrado!! ");
+                                }
+
                             break;
-  
                         case 2:
                             Console.Write("Digite o Numero: ");
                             string NumeroPesquisa = Console.ReadLine();
                             NumeroPesquisa = IsTelefoneValido(NumeroPesquisa);
 
-                            var resultadoNumero = ListaContatos.Where(contato => contato.Nome.ToLower().Contains(NumeroPesquisa.ToLower()));
-                            int c = 0;
-                            foreach (var contato in resultadoNumero)
-                            {
-                                Console.WriteLine($"{c}° Nome: {contato.Nome}, Telefone: {contato.Telefone}, Email: {contato.Email}");
-                                c++;
+                            var resultadoNumero = ListaContatos.Where(contato => contato.Telefone == NumeroPesquisa);
+                            if(resultadoNumero.Any()){
+                                int c = 0;
+                                foreach (var contato in resultadoNumero)
+                                {
+                                    Console.WriteLine($"{c}° Nome: {contato.Nome}, Telefone: {contato.Telefone}, Email: {contato.Email}");
+                                    c++;
+                                }
+                            }else{
+                                Console.Write("Nenhum resultado encontrado!! ");
                             }
                             break;
                     }
