@@ -3,18 +3,18 @@
     public string telefone { get;set; }
     public string turma { get; set; }
 
-    static void CadastrarProfessor(List<Professor> professores){
+    public static void CadastrarProfessor(List<Professor> professores){
         Console.Write("Cadastrando Professor\n\n");
-        Console.Write("Digite o Nome do professor: ");
+        Console.Write("\nDigite o nome completo do professor: ");
         string nome = Console.ReadLine().Trim();
         nome = Validar.NomeValido(nome);
 
-        Console.Write("Digite o telefone: ");
+        Console.Write("\nDigite o telefone: ");
         string telefone = Console.ReadLine().Trim();
         
         telefone = Validar.IsTelefoneValido(telefone);
 
-        Console.Write("Digite o Nome do professor: ");
+        Console.Write("\nDigite a turma do professor: ");
         string turma = Console.ReadLine().Trim();
 
         professores.Add(new Professor{

@@ -1,31 +1,31 @@
 
 public class Validar{
- public static string IsTelefoneValido(string telefone)
-    {
-        string number = telefone;
-
-        while (true)
+    public static string IsTelefoneValido(string telefone)
         {
-            number = number.Replace(".", "") 
-                           .Replace("(", "") 
-                           .Replace(")", "")
-                           .Replace("-", "")
-                           .Replace(" ", "");
+            string number = telefone;
 
-            if (!number.Any() || !number.All(char.IsDigit))
+            while (true)
             {
-                Console.Clear();
-                Console.WriteLine("Número inválido, digite novamente!\n");
-                Console.Write("Digite o telefone da pessoa: ");
-                number = Console.ReadLine().Trim();
+                number = number.Replace(".", "") 
+                            .Replace("(", "") 
+                            .Replace(")", "")
+                            .Replace("-", "")
+                            .Replace(" ", "");
+
+                if (!number.Any() || !number.All(char.IsDigit))
+                {
+                    Console.Clear();
+                    Console.WriteLine("Número inválido, digite novamente!\n");
+                    Console.Write("Digite o telefone da pessoa: ");
+                    number = Console.ReadLine().Trim();
+                }
+                else
+                {
+                    break;
+                }
             }
-            else
-            {
-                break;
-            }
+            return number;
         }
-        return number;
-    }
 
     public static string NomeValido(string nome)
     {
