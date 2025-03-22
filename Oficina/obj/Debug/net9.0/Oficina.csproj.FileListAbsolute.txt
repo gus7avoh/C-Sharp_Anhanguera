@@ -1,0 +1,15 @@
+D:\cod\c#\Oficina\bin\Debug\net9.0\Oficina.exe
+D:\cod\c#\Oficina\bin\Debug\net9.0\Oficina.deps.json
+D:\cod\c#\Oficina\bin\Debug\net9.0\Oficina.runtimeconfig.json
+D:\cod\c#\Oficina\bin\Debug\net9.0\Oficina.dll
+D:\cod\c#\Oficina\bin\Debug\net9.0\Oficina.pdb
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.GeneratedMSBuildEditorConfig.editorconfig
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.AssemblyInfoInputs.cache
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.AssemblyInfo.cs
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.csproj.CoreCompileInputs.cache
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.sourcelink.json
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.dll
+D:\cod\c#\Oficina\obj\Debug\net9.0\refint\Oficina.dll
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.pdb
+D:\cod\c#\Oficina\obj\Debug\net9.0\Oficina.genruntimeconfig.cache
+D:\cod\c#\Oficina\obj\Debug\net9.0\ref\Oficina.dll
