@@ -1,26 +1,24 @@
 
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
 public class Validar{
-    public static string IsTelefoneValido(string telefone)
-        {
+    public static string IsTelefoneValido(string telefone){
             string number = telefone;
-
-            while (true)
-            {
+            while (true){
                 number = number.Replace(".", "") 
-                            .Replace("(", "") 
-                            .Replace(")", "")
-                            .Replace("-", "")
-                            .Replace(" ", "");
+                               .Replace("(", "") 
+                               .Replace(")", "")
+                               .Replace("-", "")
+                               .Replace(" ", ""); 
 
-                if (!number.Any() || !number.All(char.IsDigit))
-                {
+                if (!number.Any() || !number.All(char.IsDigit) || number.Length != 11 ){
                     Console.Clear();
                     Console.WriteLine("Número inválido, digite novamente!\n");
                     Console.Write("Digite o telefone da pessoa: ");
                     number = Console.ReadLine().Trim();
                 }
-                else
-                {
+                else{
                     break;
                 }
             }
@@ -31,8 +29,7 @@ public class Validar{
     {
         string nomeDigitado = nome;
 
-        while (string.IsNullOrWhiteSpace(nomeDigitado))
-        {
+        while (string.IsNullOrWhiteSpace(nomeDigitado)){
             Console.Clear();
             Console.WriteLine("Nome inválido! O nome não pode ser vazio ou conter apenas espaços.");
             Console.Write("Digite o nome da pessoa: ");
@@ -55,6 +52,7 @@ public class Validar{
         }
         return false;
     }
+
 }
 
 

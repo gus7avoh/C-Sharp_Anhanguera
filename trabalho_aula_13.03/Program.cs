@@ -256,8 +256,7 @@ class Program
                             if (resultadoNome.Any())
                             {
                                 int cont = 1;
-                                foreach (var contato in resultadoNome)
-                                {
+                                foreach (var contato in resultadoNome){
                                     Console.WriteLine($"{cont}° Nome: {contato.Nome}, Telefone: {contato.Telefone}, Email: {contato.Email}");
                                     cont++;
                                 }

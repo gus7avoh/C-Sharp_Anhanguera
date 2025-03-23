@@ -1,4 +1,6 @@
- public class Professor{
+using System.Runtime.InteropServices;
+
+public class Professor{
     public string nome { get; set;}
     public string telefone { get;set; }
     public string turma { get; set; }
@@ -17,11 +19,14 @@
         Console.Write("\nDigite a turma do professor: ");
         string turma = Console.ReadLine().Trim();
 
+
         professores.Add(new Professor{
             nome = nome,
             telefone = telefone,
             turma = turma
         });
-    }
 
+    }
 }
+
+

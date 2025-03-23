@@ -27,7 +27,6 @@ class Program
                     Console.Clear();
                     Console.Write("Acessando o Cadastro de Tarefa\n");
                     Tarefa.CadastrarTarefas(tarefas);
-                    
                     break;
                 case 3:
                     Console.Clear();
@@ -46,7 +45,6 @@ class Program
             }
         }
     }
-
     public static void Loop_Demanda(List<Professor>professores, List<Demanda>demandas, List<Tarefa>tarefas){
         bool run_demandas = true;
 

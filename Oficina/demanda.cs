@@ -19,8 +19,7 @@ public class Demanda{
         string teacherName = "";
         string sala = "";
 
-        while (true)
-        {
+        while (true){
             Console.Write("Digite o nome do professor: ");
             teacherName = Console.ReadLine();
 
