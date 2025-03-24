@@ -25,7 +25,6 @@ public class Professor{
             telefone = telefone,
             turma = turma
         });
-
     }
 }
 

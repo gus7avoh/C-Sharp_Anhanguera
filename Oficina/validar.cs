@@ -52,7 +52,6 @@ public class Validar{
         }
         return false;
     }
-
 }
 
 
