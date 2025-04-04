@@ -21,8 +21,7 @@ public class Demanda
 
             var resultadoNome = ValidarProfessor(professores, teacherName);
 
-            if (resultadoNome.Count == 1){
-                
+            if (resultadoNome.Count == 1){  
                 sala = resultadoNome[0].turma;
                 teacherName = resultadoNome[0].nome;
             }
@@ -64,9 +63,7 @@ public class Demanda
     }
 
     public static List<Professor> ValidarProfessor(List<Professor> professores, string nomeProfessor){
-        var resultado = professores
-            .Where(prof => prof.nome.ToLower().Contains(nomeProfessor.ToLower()))
-            .ToList();
+        var resultado = professores.Where(prof => prof.nome.ToLower().Contains(nomeProfessor.ToLower())).ToList();
 
         if (resultado.Count == 0){
             Console.Clear();

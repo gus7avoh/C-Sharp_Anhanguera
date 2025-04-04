@@ -24,7 +24,7 @@ public class Menus{
         Console.WriteLine("1 - Visualisar as demandas do dia");
         Console.WriteLine("2 - Adicionar demanda"); //ok
         Console.WriteLine("3 - Remover demanda");
-        Console.WriteLine("4 - Inspecionar demanda");// permite buscar pela demanda na lista de demandas diarias e modificar a demanda necessaria.
+        Console.WriteLine("4 - Inspecionar demanda");
         Console.WriteLine("5 - Sair");
         Console.Write("-->");
         int indice;
