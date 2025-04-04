@@ -1,0 +1,15 @@
+D:\cod\c#\4Atividade0304\bin\Debug\net9.0\4Atividade0304.exe
+D:\cod\c#\4Atividade0304\bin\Debug\net9.0\4Atividade0304.deps.json
+D:\cod\c#\4Atividade0304\bin\Debug\net9.0\4Atividade0304.runtimeconfig.json
+D:\cod\c#\4Atividade0304\bin\Debug\net9.0\4Atividade0304.dll
+D:\cod\c#\4Atividade0304\bin\Debug\net9.0\4Atividade0304.pdb
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.GeneratedMSBuildEditorConfig.editorconfig
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.AssemblyInfoInputs.cache
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.AssemblyInfo.cs
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.csproj.CoreCompileInputs.cache
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.sourcelink.json
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.dll
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\refint\4Atividade0304.dll
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.pdb
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\4Atividade0304.genruntimeconfig.cache
+D:\cod\c#\4Atividade0304\obj\Debug\net9.0\ref\4Atividade0304.dll
