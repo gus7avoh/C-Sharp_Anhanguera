@@ -1,0 +1,15 @@
+D:\cod\c#\Estudando pra prova\bin\Debug\net9.0\Estudando pra prova.exe
+D:\cod\c#\Estudando pra prova\bin\Debug\net9.0\Estudando pra prova.deps.json
+D:\cod\c#\Estudando pra prova\bin\Debug\net9.0\Estudando pra prova.runtimeconfig.json
+D:\cod\c#\Estudando pra prova\bin\Debug\net9.0\Estudando pra prova.dll
+D:\cod\c#\Estudando pra prova\bin\Debug\net9.0\Estudando pra prova.pdb
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.GeneratedMSBuildEditorConfig.editorconfig
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.AssemblyInfoInputs.cache
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.AssemblyInfo.cs
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.csproj.CoreCompileInputs.cache
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.sourcelink.json
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.dll
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\refint\Estudando pra prova.dll
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.pdb
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\Estudando pra prova.genruntimeconfig.cache
+D:\cod\c#\Estudando pra prova\obj\Debug\net9.0\ref\Estudando pra prova.dll

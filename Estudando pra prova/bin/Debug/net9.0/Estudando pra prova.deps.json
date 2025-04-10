@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Estudando pra prova/1.0.0": {
+        "runtime": {
+          "Estudando pra prova.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Estudando pra prova/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
